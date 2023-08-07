@@ -1,0 +1,9 @@
+  version: 1
+  type: pipeline-template
+
+  name: Simple Pipeline example
+  description: Hello World Pipeline
+  parameters:
+    - name: printString
+      type: string
+      displayName: String to be printed during pipeline

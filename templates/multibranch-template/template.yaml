@@ -3,10 +3,13 @@ name: A Multibranch Template with Orphaned Items
 type: pipeline-template
 templateType: MULTIBRANCH
 parameters:
-  - name: repoUrl
+  - name: github_repo
     type: string
     displayName: Repo
+  - name: github_creds
+    type: string
+    displayName: Credentials
 multibranch:
   branchSource:
     git:
-      remote: ${repoUrl}
+      remote: ${github_repo}

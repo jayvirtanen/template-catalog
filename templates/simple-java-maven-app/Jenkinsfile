@@ -1,6 +1,11 @@
+@Library ('shared-libs') _
 pipeline {
-    agent any
-    
+      agent{
+        kubernetes{
+          yaml mavenTemplate()
+          namespace 'default'
+        }
+      }
     stages {
         stage('Checkout') { 
             steps {

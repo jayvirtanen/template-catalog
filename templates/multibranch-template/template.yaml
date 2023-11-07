@@ -7,7 +7,7 @@ parameters:
     type: string
     displayName: Repo
   - name: github_creds
-    type: string
+    type: credentials
     displayName: Credentials
 multibranch:
   branchSource:

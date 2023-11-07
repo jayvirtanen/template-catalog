@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Build') { 
             steps {
+            container(name: 'maven'){
                 sh 'mvn -B -DskipTests clean package' 
+            }
             }
         }
     }

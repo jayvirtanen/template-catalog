@@ -3,13 +3,15 @@ name: Multibranch Template
 type: pipeline-template
 templateType: MULTIBRANCH
 parameters:
-  - name: github_repo
+  - name: repoName
     type: string
-    displayName: Repo
+    displayName: "Repository Name"
   - name: github_creds
     type: credentials
     displayName: Credentials
 multibranch:
   branchSource:
-    git:
-      remote: ${github_repo}
+    github:
+      repoOwner: jayvirtanen
+      repository: ${repoName]
+      credentialsId: ${github-creds}

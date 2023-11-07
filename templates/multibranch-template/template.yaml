@@ -13,5 +13,5 @@ multibranch:
   branchSource:
     github:
       repoOwner: jayvirtanen
-      repository: ${repoName]
+      repository: ${repoName}
       credentialsId: ${github-creds}

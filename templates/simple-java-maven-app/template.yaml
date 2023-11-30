@@ -18,4 +18,7 @@ parameters:
     type: credentials
   - name: pod_template
     displayName: Build Agent Java Version
-    type: credentials
+    type: string
+    allowedValues:
+      - Maven-3.8.6-JDK-11
+      - Maven-3.8.6-JDK-8

@@ -16,4 +16,6 @@ parameters:
   - name: github_creds
     displayName: GitHub Credentials ID
     type: credentials
-    defaultValue: github-creds-example
+  - name: pod_template
+    displayName: Build Agent Java Version
+    type: credentials

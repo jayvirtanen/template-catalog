@@ -1,9 +1,18 @@
-@Library ('shared-libs') _
 pipeline {
       agent{
-        kubernetes{
-          yaml mavenTemplate()
-          namespace 'default'
+        kubernetes {
+            yaml '''
+            apiVersion: v1
+            kind: Pod
+            spec:
+              containers:
+              - name: maven
+                image: maven:3.8.6-openjdk-${jdk_version}
+                command:
+                - sleep
+                args:
+                - infinity
+                  '''
         }
       }
     stages {
@@ -15,7 +24,7 @@ pipeline {
         stage('Build') { 
             steps {
             container(name: 'maven'){
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn ${maven_goals}' 
             }
             }
         }

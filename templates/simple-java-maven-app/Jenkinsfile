@@ -24,7 +24,8 @@ pipeline {
         stage('Build') { 
             steps {
             container(name: 'maven'){
-                sh 'mvn ${maven_goals}' 
+                echo "${maven_goals}"
+                sh 'mvn "${maven_goals}"' 
             }
             }
         }

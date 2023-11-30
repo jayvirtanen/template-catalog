@@ -1,7 +1,7 @@
 version: 1
 type: pipeline-template
 
-name: Maven Pipeline
+name: Java 8 Maven Pipeline
 description: Maven Template
 parameters:
   - name: emailRecipient

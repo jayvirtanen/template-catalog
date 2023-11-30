@@ -2,7 +2,6 @@ pipeline {
       agent{
         label "${pod_template}"
         }
-      }
     stages {
         stage('Checkout') { 
             steps {

@@ -22,3 +22,9 @@ parameters:
     allowedValues:
       - Maven-3.8.6-JDK-11
       - Maven-3.8.6-JDK-8
+  - name: env_var
+    displayName: Environment Variable to Print
+    type: string
+    allowedValues:
+      - ENV_A
+      - ENV_B

@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
             container(name: 'maven'){
-                sh 'printenv'
+                sh 'echo ${!GOALS}'
                 sh "mvn ${maven_goals}" 
             }
             }

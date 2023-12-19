@@ -10,15 +10,14 @@ pipeline {
         }
         stage('Build') { 
             environment{
-                  GOALS = "GOALS_${env_var}"
-                  SHELL = "/bin/bash"
+                  GOALS = "${env_var}"
             }
             steps {
             container(name: 'maven'){
-                  sh '''
+                  sh """
                   #!/bin/bash
                   echo ${!env_var}
-                  '''
+                  """
             }
             }
         }

@@ -3,15 +3,18 @@ pipeline {
         label "${pod_template}"
         }
     stages {
-        stage('Checkout') { 
+        stage('Checkout') {
             steps {
                 git credentialsId: "${github_creds}" , url: "${github_repo}" 
             }
         }
         stage('Build') { 
+            environment{
+                  GOALS= "${env_var}"
+            }
             steps {
             container(name: 'maven'){
-                sh 'echo ${!env_var}'
+                sh 'printenv'
                 sh "mvn ${maven_goals}" 
             }
             }

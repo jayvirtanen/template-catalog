@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') { 
             environment{
-                  GOALS = "${env.env_var}"
+                  GOALS = "GOALS_${env_var}"
                   SHELL = "/bin/bash"
             }
             steps {

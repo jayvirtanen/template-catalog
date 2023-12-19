@@ -11,7 +11,7 @@ pipeline {
         stage('Build') { 
             steps {
             container(name: 'maven'){
-                sh "echo ${${env_var}}
+                sh "echo ${${env_var}}"
                 sh "mvn ${maven_goals}" 
             }
             }

@@ -14,7 +14,9 @@ pipeline {
             }
             steps {
             container(name: 'maven'){
+                sh 'echo $SHELL'
                 sh 'echo ${GOALS}'
+                sleep 600
                 sh "mvn ${maven_goals}" 
             }
             }

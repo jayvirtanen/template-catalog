@@ -15,9 +15,10 @@ pipeline {
             }
             steps {
             container(name: 'maven'){
-                sh 'echo ${!${env_var}}'
-                sleep 600
-                sh "mvn ${maven_goals}" 
+                  sh '''
+                  #!/bin/bash
+                  echo ${!env_var}
+                  '''
             }
             }
         }

@@ -14,10 +14,7 @@ pipeline {
             }
             steps {
             container(name: 'maven'){
-                  sh """
-                  #!/bin/bash
-                  echo ${!env_var}
-                  """
+                  sh "echo env.$env_var"
             }
             }
         }

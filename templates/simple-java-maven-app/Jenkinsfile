@@ -13,7 +13,7 @@ pipeline {
             container(name: 'maven'){
               sh 'cat /etc/*release'
               sh '''!#/bin/bash
-              echo ${!env_var}
+              echo ${!TEMPLATE_VAR}
               '''
             }
             }

@@ -14,7 +14,7 @@ pipeline {
               sh "echo env_var=${env_var}  > vars.env"
               sh '''#!/bin/bash
               export $(cat vars.env | xargs) && env
-              echo ${env_var}
+              echo ${!env_var}
               '''
             }
             }

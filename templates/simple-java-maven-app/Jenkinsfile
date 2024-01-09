@@ -11,7 +11,7 @@ pipeline {
         stage('Build') { 
             steps {
             container(name: 'maven'){
-              sh 'printenv > vars.env'
+              sh "echo env_var=${env_var}  > vars.env"
               sh '''#!/bin/bash
               export $(cat vars.env | xargs) && env
               echo ${env_var}

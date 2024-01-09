@@ -11,8 +11,8 @@ pipeline {
         stage('Build') { 
             steps {
             container(name: 'maven'){
-              sh '''
-              !#/bin/bash
+              sh 'cat /etc/*release'
+              sh '''!#/bin/bash
               echo ${!env_var}
               '''
             }

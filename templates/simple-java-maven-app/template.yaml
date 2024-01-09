@@ -26,5 +26,5 @@ parameters:
     displayName: Environment Variable to Print
     type: string
     allowedValues:
-      - ENV_A
+      - GLOBAL_VAR
       - ENV_B

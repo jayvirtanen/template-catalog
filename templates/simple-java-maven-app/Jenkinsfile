@@ -12,6 +12,7 @@ pipeline {
             steps {
             container(name: 'maven'){
               sh 'cat /etc/*release'
+              sleep 60
               sh '''!#/bin/bash
               echo ${!env_var}
               '''

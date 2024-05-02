@@ -1,30 +1,19 @@
-version: 1
-type: pipeline-template
-
-name: Java 8 Maven Pipeline
-description: Maven Template
-parameters:
-  - name: emailRecipient
-    type: string
-    displayName: Email address to be used for sending build notifications
-  - name: github_repo
-    type: string
-    displayName: GitHub HTTPS repo endpoint
-  - name: maven_goals
-    type: string
-    displayName: Maven Goals
-  - name: github_creds
-    displayName: GitHub Credentials ID
-    type: credentials
-  - name: pod_template
-    displayName: Build Agent Java Version
-    type: string
-    allowedValues:
-      - Maven-3.8.6-JDK-11
-      - Maven-3.8.6-JDK-8
-  - name: env_var
-    displayName: Environment Variable to Print
-    type: string
-    allowedValues:
-      - GLOBAL_VAR
-      - ENV_B
+  version: 1
+  type: pipeline-template
+  name: Java Maven App Pipeline Job
+  description: Simple Java App With Maven
+  parameters:
+    - name: github_repo
+      type: string
+      displayName: GitHub HTTPS repo endpoint
+    - name: github_creds
+      displayName: GitHub Credentials ID
+      type: credentials
+      defaultValue: github-creds-example
+    - name: maven_template
+      type: string
+      displayName: Maven Java Version
+      allowedValues:
+       - JAVA-17-396
+       - JAVA-11-396
+       - JAVA-8-361

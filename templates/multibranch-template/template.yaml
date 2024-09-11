@@ -9,6 +9,13 @@ parameters:
   - name: github_creds
     type: credentials
     displayName: Credentials
+  - name: scanInterval
+    type: string
+    displayName: "Scan Interval"
+    defaultValue: 2 days
+    allowedValues:
+     - 1 hour
+     - 2 hours
 multibranch:
   branchSource:
     github:

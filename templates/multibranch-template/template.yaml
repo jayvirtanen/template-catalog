@@ -16,6 +16,8 @@ parameters:
     allowedValues:
      - 1 hour
      - 2 hours
+     - 1 day
+     - 2 days
 multibranch:
   branchSource:
     github:

@@ -15,4 +15,4 @@ multibranch:
       repoOwner: jayvirtanen
       repository: ${repoName}
       credentialsId: ${github-creds}
-  scanRepositoryInterval: 2 hours
+  scanRepositoryInterval: ${scanInterval}

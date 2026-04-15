@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: ${github_branch}, credentialsId: ${github_creds}, url: ${github_repo}
+                git branch: "${github_branch}", credentialsId: "${github_creds}", url: "${github_repo}"
             }
         }
         stage('Build') {

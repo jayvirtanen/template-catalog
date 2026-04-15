@@ -6,6 +6,9 @@
     - name: github_repo
       type: string
       displayName: GitHub HTTPS repo endpoint
+    - name: github_branch
+      type: string
+      displayName: GitHub Branch
     - name: github_creds
       displayName: GitHub Credentials ID
       type: credentials

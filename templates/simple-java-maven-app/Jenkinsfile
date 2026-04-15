@@ -8,7 +8,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-              git credentialsId: "${github_creds}", url: "${github_repo}"
+              checkout scmGit(
+                branches: [[name: ${github_branch}]],
+                userRemoteConfigs: [[credentialsId:  ${github_creds},
+                url: ${github_repo}]])
             }
         }
         stage('Build') {
